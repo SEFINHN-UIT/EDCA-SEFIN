@@ -10,6 +10,11 @@
           "title": "Obligation Id",
           "description": "Number of the document that represents the obligation."
         },
+        "description": {
+          "type": "string",
+          "title": "Obligation Description",
+          "description": "Describe the obligation."
+        },
         "bill": {
           "title": "Bill",
           "description": "The end date for the period. When known, a precise end date must always be provided.",
