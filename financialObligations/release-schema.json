@@ -152,10 +152,13 @@
     },
     "Implementation": {
       "properties": {
-        "financialObligation": {
+        "financialObligations": {
           "title": "Financial Obligation",
           "description": "Financial Obligation",
-          "$ref": "#/definitions/FinancialObligation"
+          "type": "array",
+          "items": {
+            "$ref" :"#/definitions/FinancialObligation"
+          }
         }
       }
     }
