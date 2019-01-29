@@ -6,7 +6,7 @@
     "en": "Adds a budget breakdown array to the budget object to break down a budget by source and period."
   },
   "documentationUrl": {
-    "en": "https://extensions.open-contracting.org/en/extensions/budget/"
+    "en": "https://github.com/SEFINHN-UIT/EDCA-SEFIN/blob/master/Extensiones/finantialObligations/"
   },
   "compatibility": [
     "1.1"
