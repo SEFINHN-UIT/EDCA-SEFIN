@@ -1,14 +1,16 @@
 ## Transaction Additional Fields
  
-In Honduras, a payment process is compose by 2 differents stages, 
-- finantialObligation (F01-Devengado): when the suppliers make the invoice to receive the payment.
+In Honduras, a payment process is compose by 2 different stages, 
+- financialObligation (F01-Devengado): when the suppliers make the invoice to receive the payment.
 - transaction (Orden de Transferencia Pago): when the payment is done by Secretaria de Finanzas and the money is deposit to the supplier.
 The current transaction object only covers the last part of the process, and the other stage is relevant for the process, too.
-Also, the Orden de Transferencia Pago in Honduras have the extra fields that are not in the transaction object: budgetSource, finantialObligationIds
+Also, the Orden de Transferencia Pago in Honduras have the extra fields that are not in the transaction object: budgetSource, financialObligationIds
 
 ## Example
-```javascript
- "transactions": [
+```json
+{
+"implementation": {
+            "transactions": [
               {
                 "id": "T2018-449-1-TRB-93064",
                 "date": "2018-04-12T14:04:47Z",
@@ -33,7 +35,7 @@ Also, the Orden de Transferencia Pago in Honduras have the extra fields that are
                 ]
               }
             ],
-            "finantialObligations": [
+            "financialObligations": [
               {
                 "id": "D2018-50-1-563-1-1",
                 "description": "CANCELACION DE SERVICIO DE AGUA POTABLE DE LOS DIFERENTES CENTROS EDUCATIVOS DE PUERTO CORTES CORRESPONDIENTE A LOS MESES DE SEPTIEMBRE,OCTUBRE,Y NOVIEMBRE DEL\nAÑO 2,017 (QUEDO PENDIENTE POR FALTA DE PRESUPUESTO)",
@@ -51,4 +53,6 @@ Also, the Orden de Transferencia Pago in Honduras have the extra fields that are
                 "approvalDate": "2018-03-12T11:03:46Z"
               }
             ]
+        }
+ }
 ```
