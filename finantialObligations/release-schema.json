@@ -1,6 +1,6 @@
 {
   "definitions": {
-    "FinantialObligation": {
+    "finantialObligations": {
       "title": "Finantial Obligation",
       "description": "Finantial Obligation  ",
       "type": "object",
@@ -114,7 +114,7 @@
     },
     "Transaction": {
       "properties": {
-        "finantialObligationIds": {
+        "finantialObligationsIds": {
           "title": "Finantial Obligation Id",
           "description": "Information about the finantial obligation Id",
           "type": "array",
