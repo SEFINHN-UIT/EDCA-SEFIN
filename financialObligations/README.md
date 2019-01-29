@@ -30,7 +30,7 @@ Also, the Orden de Transferencia Pago in Honduras have the extra fields that are
                 "budgetSources": [
                   "2018-50-1-5-1-0-0-12-11-1-21200-0"
                 ],
-                "finantialObligationIds": [
+                "financialObligationIds": [
                   "D2018-50-1-563-1-1"
                 ]
               }
