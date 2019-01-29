@@ -1,8 +1,8 @@
 {
   "definitions": {
-    "finantialObligations": {
-      "title": "Finantial Obligation",
-      "description": "Finantial Obligation  ",
+    "FinancialObligation": {
+      "title": "Financial Obligation",
+      "description": "Financial Obligation",
       "type": "object",
       "properties": {
         "id": {
@@ -114,9 +114,9 @@
     },
     "Transaction": {
       "properties": {
-        "finantialObligationsIds": {
-          "title": "Finantial Obligation Id",
-          "description": "Information about the finantial obligation Id",
+        "financialObligationIds": {
+          "title": "Financial Obligation Id",
+          "description": "Information about the financial obligation Id",
           "type": "array",
           "items": {
             "type": "string"
@@ -141,12 +141,21 @@
         },
         "uri": {
           "title": "Uri",
-          "description": "Idenfitier of the transfer order.",
+          "description": "Identifier of the transfer order.",
           "type": [
             "string",
             "null"
           ],
           "format": "uri"
+        }
+      }
+    },
+    "Implementation": {
+      "properties": {
+        "financialObligation": {
+          "title": "Financial Obligation",
+          "description": "Financial Obligation",
+          "$ref": "#/definitions/FinancialObligation"
         }
       }
     }
