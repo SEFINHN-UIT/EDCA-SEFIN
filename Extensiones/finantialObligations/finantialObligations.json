@@ -1,0 +1,154 @@
+{
+  "definitions": {
+    "FinantialObligation": {
+      "title": "Finantial Obligation",
+      "description": "Finantial Obligation  ",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "Obligation Id",
+          "description": "Number of the document that represents the obligation."
+        },
+        "bill": {
+          "title": "Bill",
+          "description": "The end date for the period. When known, a precise end date must always be provided.",
+          "$ref": "#/definitions/Bill"
+        },
+        "retentions": {
+          "title": "Retentions",
+          "description": "Retentions for the payment value.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Retention"
+          },
+          "uniqueItems": true
+        },
+        "creationDate": {
+          "description": "It indicates the date of loading of the obligation",
+          "format": "date-time",
+          "title": "Creation Date",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "approvalDate": {
+          "description": "It indicates the date of verification and approval of the obligation by the hierarchical level.",
+          "format": "date-time",
+          "title": "Approval Date",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Bill": {
+      "title": "Bill",
+      "description": "Bill",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "Bill Id",
+          "description": "It corresponds to the numbering of the document."
+        },
+        "type": {
+          "title": "Bill Type",
+          "description": "It corresponds to the description of the document class.",
+          "type": "string"
+        },
+        "description": {
+          "type": "string",
+          "title": "Bill Description",
+          "description": "Brief description of the operation, referencing the documentations that support it."
+        },
+        "date": {
+          "description": "Indicates the date of issue of the document.",
+          "format": "date-time",
+          "title": "Bill Date",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "amount": {
+          "title": "Amount",
+          "description": "Indicates the amount of operation set forth in the document. (contains deductions)",
+          "$ref": "#/definitions/Value"
+        }
+      }
+    },
+    "Retention": {
+      "title": "Retention",
+      "description": "Retention",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Retention Type",
+          "description": "Type of the retention",
+          "type": "string",
+          "codelist": "retentionTypeCodelist.csv",
+          "openCodelist": true,
+          "enum": [
+            "tax",
+            "fee",
+            "penalty",
+            "other"
+          ],
+          "minItems": 1
+        },
+        "name": {
+          "type": "string",
+          "title": "Retention Name",
+          "description": "Retention Name",
+          "format": "string"
+        },
+        "amount": {
+          "title": "Amount of the Retention",
+          "description": "Deduction for value",
+          "$ref": "#/definitions/Value"
+        }
+      }
+    },
+    "Transaction": {
+      "properties": {
+        "finantialObligationIds": {
+          "title": "Finantial Obligation Id",
+          "description": "Information about the finantial obligation Id",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "budgetSources": {
+          "type": "array",
+          "title": "Budget Breakdowns Ids",
+          "items": {
+            "type": "string"
+          },
+          "description": "Budget Breakdowns Ids used in this payment"
+        },
+        "description": {
+          "title": "Description",
+          "description": "Concept of the transfer",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "uri": {
+          "title": "Uri",
+          "description": "Idenfitier of the transfer order.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        }
+      }
+    }
+  }
+}
