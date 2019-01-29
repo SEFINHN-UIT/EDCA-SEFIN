@@ -1,1 +1,11 @@
-{"name":{"en":"finantialObligations"},"description":{"en":"Extensión para definir la obligación financiera de un proceso de compra dentro del Sistema SIAFI."},"documentationUrl":{"en":""}}
+{
+  "name": {
+    "en": "Transaction Additional Fields for Paraguay"
+  },
+  "description": {
+    "en": "Support for finantialObligation and paymentRequest, according to the payment process for Paraguay"
+  },
+  "documentationUrl": {
+    "en": "https://github.com/SEFINHN-UIT/EDCA-SEFIN/blob/master/Extensiones/finantialObligations"
+  }
+}
